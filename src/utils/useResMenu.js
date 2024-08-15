@@ -15,13 +15,10 @@ const useResMenu = (resId) => {
         "&catalog_qa=undefined&submitAction=ENTER"
     );
     const json = await data.json();
+
     setResInfo(json?.data?.cards?.[2]?.card?.card?.info);
 
     setAccordionList(
-      json?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
-    );
-
-    console.log(
       json?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
     );
   };

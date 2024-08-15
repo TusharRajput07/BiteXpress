@@ -19,7 +19,7 @@ const Cart = () => {
 
   if (cartQty === 0) {
     return (
-      <div className="empty-cart-container">
+      <div className="empty-cart-container" data-testid="emptyCart">
         <h2>🍃Your cart feels very light!🍃</h2>
         <Link to="/">
           <div className="explore-restaurant">Explore Restaurants</div>
@@ -44,7 +44,11 @@ const Cart = () => {
               </div>
             </div>
           </div>
-          <div className="clear-cart" onClick={() => handleClearCart()}>
+          <div
+            className="clear-cart"
+            data-testid="clearCartBtn"
+            onClick={() => handleClearCart()}
+          >
             Clear Cart
           </div>
         </div>
@@ -58,7 +62,9 @@ const Cart = () => {
           <div className="bill-card-heading">Bill Details</div>
           <div className="bill-card-items">
             <div className="bill-card-items-left">Item Total</div>
-            <div className="bill-card-items-right">₹ {totalPrice}</div>
+            <div className="bill-card-items-right">
+              ₹ {totalPrice.toFixed(2)}
+            </div>
           </div>
           <div className="bill-card-items">
             <div className="bill-card-items-left">Delivery Fee</div>
@@ -75,7 +81,9 @@ const Cart = () => {
           <div className="bill-card-divider"></div>
           <div className="bill-card-pay">
             <div className="bill-card-pay-left">To Pay</div>
-            <div className="bill-card-pay-right">₹ {totalPrice + 25}</div>
+            <div className="bill-card-pay-right">
+              ₹ {(totalPrice + 25).toFixed(2)}
+            </div>
           </div>
         </div>
         <div className="bill-policy">

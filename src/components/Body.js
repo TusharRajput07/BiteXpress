@@ -28,7 +28,7 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65420&lng=77.23730&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     // converting the data to json format (as the data returned will be non-readable)
-    json = await data.json();
+    const json = await data.json();
 
     const resList =
       json.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle
@@ -80,6 +80,7 @@ const Body = () => {
         <input
           type="text"
           placeholder="Search for restaurant, cuisine or a dish"
+          data-testid="searchInput"
           className="search-bar"
           value={searchText}
           onChange={(e) => {
@@ -88,6 +89,7 @@ const Body = () => {
           onKeyDown={handleKeyDown}
         />
         <SearchRoundedIcon
+          data-testid="searchIcon"
           fontSize="large"
           className="search-icon"
           onClick={handleSearch}

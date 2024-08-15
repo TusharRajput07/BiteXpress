@@ -51,7 +51,7 @@ const RestaurantDishCard = (props) => {
   };
 
   return (
-    <div className="res-dish-card">
+    <div className="res-dish-card" data-testid="foodItem">
       <div className="res-dish-left-container">
         <div className="res-dish-left-upper-container">
           <div className="res-dish-name">{name}</div>
@@ -95,7 +95,11 @@ const RestaurantDishCard = (props) => {
             </div>
           </div>
         ) : (
-          <div className="add-to-cart-init" onClick={() => handleAddItem()}>
+          <div
+            className="add-to-cart-init"
+            data-testid="addBtn"
+            onClick={() => handleAddItem()}
+          >
             Add
           </div>
         )}

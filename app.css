@@ -826,7 +826,8 @@ a {
 .cart-dish-card-left-container {
   display: flex;
   align-items: center;
-  width: 300px;
+  /* width: 300px; */
+  flex: 1;
 }
 
 .cart-dish-type {
@@ -868,6 +869,11 @@ a {
   background-color: #f0f0f0;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+}
+
+.cart-dish-price {
+  width: 100px;
+  text-align: right;
 }
 
 /**************************************** bill-section *************************************************/

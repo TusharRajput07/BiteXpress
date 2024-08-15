@@ -8,7 +8,7 @@ const CartDishCard = ({ value }) => {
   const removeDishFromCart = useRemoveItem();
 
   return (
-    <div className="cart-dish-card">
+    <div className="cart-dish-card" data-testid="cartCard">
       <div className="cart-dish-card-left-container">
         <div className="res-dish-type">
           <div className={`type-outer ${isVeg ? "" : "red-icon-outer"}`}>
@@ -32,7 +32,10 @@ const CartDishCard = ({ value }) => {
         </div>
       </div>
       <div className="cart-dish-price">
-        ₹ {price ? (price / 100) * qty : (defaultPrice / 100) * qty}
+        ₹{" "}
+        {price
+          ? ((price / 100) * qty).toFixed(2)
+          : ((defaultPrice / 100) * qty).toFixed(2)}
       </div>
     </div>
   );
