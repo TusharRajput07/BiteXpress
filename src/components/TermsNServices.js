@@ -6,11 +6,11 @@ const TermsNServices = () => {
       </div>
       <div className="template-content">
         <h3>Terms and Services</h3>
-        Welcome to [App Name]. By using our services, you agree to be bound by
+        Welcome to BiteXpress. By using our services, you agree to be bound by
         the following terms and conditions. Please read them carefully.
         <br />
         <h3>1. Acceptance of Terms</h3>
-        By accessing and using [App Name] (the "Service"), you agree to comply
+        By accessing and using BiteXpress (the "Service"), you agree to comply
         with and be legally bound by these terms of service (the "Terms"). If
         you do not agree to these Terms, you may not use the Service.
         <br />
@@ -78,7 +78,7 @@ const TermsNServices = () => {
         <h3>5. Refunds and Disputes</h3>
         <ul>
           <li>
-            Refund Policy: Refunds are issued at the discretion of [App Name]
+            Refund Policy: Refunds are issued at the discretion of BiteXpress
             and the participating restaurants. If you have any issues with your
             order, please contact our customer support.
           </li>
@@ -99,7 +99,7 @@ const TermsNServices = () => {
           </li>
           <li>
             Content Submission: If you submit any content to the Service (e.g.,
-            reviews, comments), you grant [App Name] a non-exclusive,
+            reviews, comments), you grant BiteXpress a non-exclusive,
             royalty-free, perpetual, and worldwide license to use, modify, and
             distribute such content.
           </li>
@@ -109,7 +109,7 @@ const TermsNServices = () => {
         <ul>
           <li>
             Ownership: All content, trademarks, and data provided on the Service
-            are the property of [App Name] or its licensors. You agree not to
+            are the property of BiteXpress or its licensors. You agree not to
             use any such content without the express written permission of the
             owner.
           </li>

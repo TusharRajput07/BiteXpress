@@ -145,6 +145,40 @@ a {
   border-radius: 50%;
 }
 
+@media (max-width: 600px) {
+  .header {
+    padding: 0;
+  }
+  .logo-container {
+    flex-direction: column;
+  }
+  .logo-icon-container {
+    width: 30px;
+    height: 30px;
+  }
+  .logo {
+    font-size: 20px !important;
+  }
+  .brand-name {
+    font-size: 12px;
+    margin-left: 0;
+  }
+  .item {
+    font-size: 12px;
+    padding: 0 5px;
+  }
+  .header-profile {
+    margin-right: 0;
+    /* flex-direction: column; */
+  }
+  .cart {
+    font-size: 20px !important;
+  }
+  .cart:hover {
+    font-size: 25px !important;
+  }
+}
+
 /*--------------------------------------- body ----------------------------------------------*/
 
 .search-container {
@@ -220,6 +254,7 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .res-logo {
@@ -235,7 +270,7 @@ a {
   width: 230px;
   border: 1px solid transparent;
   border-radius: 30px;
-  margin: 20px 20px;
+  margin: 20px 30px;
   background-color: rgb(239, 232, 232);
   transition: all 0.2s ease-in-out;
 }
@@ -305,6 +340,46 @@ a {
 
 .res-info {
   padding: 5px 12px 15px 12px;
+}
+
+@media (max-width: 600px) {
+  .search-container {
+    margin-top: 10px;
+    padding: 0 20px;
+  }
+
+  .search-bar {
+    height: 40px;
+    width: 100%;
+  }
+
+  .search-icon {
+    font-size: 28px !important;
+  }
+
+  .heading-container {
+    padding: 20px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .heading {
+    font-size: 16px;
+  }
+
+  .filter {
+    align-self: end;
+  }
+
+  .filter-btn {
+    width: 150px;
+    font-size: 12px;
+  }
+
+  .res-card {
+    /* width: 200px; */
+    margin: 0px;
+  }
 }
 
 /*--------------------------------------- shimmer ----------------------------------------------*/
@@ -1123,6 +1198,45 @@ a {
 
 .footer-button:hover {
   color: rgb(211, 136, 57);
+}
+
+@media (max-width: 600px) {
+  .footer-upper {
+    flex-wrap: wrap;
+  }
+
+  .footer-container {
+    flex-basis: 48%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .footer-contact-container,
+  .footer-legal-container {
+    text-align: center;
+  }
+
+  .footer-container-left {
+    flex-basis: 100%;
+    padding-top: 20px;
+  }
+
+  .footer-heading {
+    font-size: 12px;
+  }
+
+  .footer-items {
+    font-size: 9px;
+  }
+
+  .footer-social-icon {
+    margin-right: 2px;
+  }
+
+  .footer-copyright {
+    padding: 20px;
+    font-size: 8px;
+  }
 }
 
 .grocery-content {

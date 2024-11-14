@@ -14,6 +14,7 @@ import { Provider } from "react-redux";
 import reduxStore from "./utils/reduxStore";
 import Footer from "./components/Footer";
 import TermsNServices from "./components/TermsNServices";
+import ScrollToTop from "./components/scrollToTop";
 
 // lazy loading / on demand loading / chunking / code Splitting / dynamic bundling / dynamic import
 const Grocery = lazy(() => import("./components/Grocery"));
@@ -55,36 +56,72 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />,
+        element: (
+          <>
+            <ScrollToTop />
+            <Body />
+          </>
+        ),
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <>
+            <ScrollToTop />
+            <About />
+          </>
+        ),
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: (
+          <>
+            <ScrollToTop />
+            <Contact />
+          </>
+        ),
       },
       {
         path: "/profile",
-        element: <UserProfile />,
+        element: (
+          <>
+            <ScrollToTop />
+            <UserProfile />
+          </>
+        ),
       },
       {
         path: "/cart",
-        element: <Cart />,
+        element: (
+          <>
+            <ScrollToTop />
+            <Cart />
+          </>
+        ),
       },
       {
         path: "/terms",
-        element: <TermsNServices />,
+        element: (
+          <>
+            <ScrollToTop />
+            <TermsNServices />
+          </>
+        ),
       },
       {
         path: "/restaurant/:resId",
-        element: <RestaurantMenu />,
+        element: (
+          <>
+            <ScrollToTop />
+            <RestaurantMenu />
+          </>
+        ),
       },
       {
         path: "/grocery",
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
+            <ScrollToTop />
             <Grocery />
           </Suspense>
         ),
