@@ -54,7 +54,7 @@ const Cart = () => {
         </div>
 
         {Object.values(dishObject).map((value) => (
-          <CartDishCard value={value} />
+          <CartDishCard key={cloudinaryImageId} value={value} />
         ))}
       </div>
       <div className="cart-page-right-container">

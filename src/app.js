@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Header from "./components/Header";
@@ -22,9 +22,19 @@ const Grocery = lazy(() => import("./components/Grocery"));
 // Main component
 
 const AppLayout = () => {
-  const [name, setName] = useState("Guest");
-  const [email, SetEmail] = useState("guest@gmail.com");
-  const [address, setAddress] = useState("street-123, Delhi-110022");
+  const [name, setName] = useState(localStorage.getItem("username") || "Guest");
+  const [email, SetEmail] = useState(
+    localStorage.getItem("useremail" || "guest@gmail.com")
+  );
+  const [address, setAddress] = useState(
+    localStorage.getItem("useraddress" || "street-xyz, abc-123")
+  );
+
+  useEffect(() => {
+    localStorage.setItem("username", name);
+    localStorage.setItem("useremail", email);
+    localStorage.setItem("useraddress", address);
+  }, [name, email, address]);
 
   return (
     <Provider store={reduxStore}>

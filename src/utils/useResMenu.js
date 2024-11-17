@@ -9,18 +9,21 @@ const useResMenu = (resId) => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.65420&lng=77.23730&restaurantId=" +
-        resId +
-        "&catalog_qa=undefined&submitAction=ENTER"
-    );
-    const json = await data.json();
+    try {
+      const response = await fetch(
+        `http://localhost:5000/api/menu?resId=${resId}`
+      );
 
-    setResInfo(json?.data?.cards?.[2]?.card?.card?.info);
+      const json = await response.json();
 
-    setAccordionList(
-      json?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
-    );
+      setResInfo(json?.data?.cards?.[2]?.card?.card?.info);
+
+      setAccordionList(
+        json?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
+      );
+    } catch (error) {
+      console.error("Error:", error); // Handle any errors
+    }
   };
 
   return { resInfo, accordionList };

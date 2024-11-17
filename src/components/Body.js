@@ -24,19 +24,21 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65420&lng=77.23730&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-    // converting the data to json format (as the data returned will be non-readable)
-    const json = await data.json();
+    try {
+      const response = await fetch("http://localhost:5000/api/browse");
 
-    const resList =
-      json.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
+      const json = await response.json();
 
-    setOriginalList(resList);
-    // console.log(resList[2].info.aggregatedDiscountInfoV3.header);
-    setRestaurantList(resList);
+      const resList =
+        json.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
+
+      setOriginalList(resList);
+      // console.log(resList[2].info.aggregatedDiscountInfoV3.header);
+      setRestaurantList(resList);
+    } catch (error) {
+      console.error("Error:", error); // Handle any errors
+    }
   };
 
   const filterPage = () => {

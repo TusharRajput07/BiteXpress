@@ -5,10 +5,13 @@ import HomeIcon from "@mui/icons-material/Home";
 import EditProfile from "./EditProfile";
 import { useContext, useState } from "react";
 import ProfileContext from "../utils/ProfileContext";
+import { useNavigate } from "react-router-dom";
 
 const UserProfile = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const userData = useContext(ProfileContext);
+
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setOpenDialog(!openDialog);
@@ -26,7 +29,7 @@ const UserProfile = () => {
       </div>
 
       <div className="profile-heading">Hello {userData?.username}!</div>
-      <div className="profile-email">{userData.useremail}</div>
+      <div className="profile-email">{userData?.useremail}</div>
 
       <div className="profile-card-container">
         <div className="profile-card">
@@ -34,7 +37,7 @@ const UserProfile = () => {
           <div className="profile-card-heading">Orders</div>
           <div className="order-text">check your order status</div>
         </div>
-        <div className="profile-card">
+        <div onClick={() => navigate("/cart")} className="profile-card">
           <ShoppingCartIcon fontSize="large" className="profile-card-icon" />
           <div className="profile-card-heading">Your Cart</div>
           <div className="order-text">check your cart details</div>
