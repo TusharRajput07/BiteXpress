@@ -45,7 +45,7 @@ const Contact = () => {
         address: 45, XYZ Lane, New Delhi, IN
         <br />
         <h3>We're Here for You!</h3>
-        At [App Name], our customers come first. We're committed to making your
+        At BiteXpress, our customers come first. We're committed to making your
         experience smooth, enjoyable, and satisfying. Don't hesitate to reach
         out—we're here to help!
       </div>

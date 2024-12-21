@@ -147,10 +147,7 @@ a {
 
 @media (max-width: 600px) {
   .header {
-    padding: 0;
-  }
-  .logo-container {
-    flex-direction: column;
+    padding: 0 10px;
   }
   .logo-icon-container {
     width: 30px;
@@ -160,8 +157,8 @@ a {
     font-size: 20px !important;
   }
   .brand-name {
-    font-size: 12px;
-    margin-left: 0;
+    font-size: 16px;
+    margin-left: 5px;
   }
   .item {
     display: none;
@@ -313,6 +310,8 @@ a {
 
 .location {
   font-weight: 200;
+  display: flex;
+  align-items: center;
 }
 
 .location-icon {
@@ -375,9 +374,43 @@ a {
     font-size: 12px;
   }
 
+  .res-container {
+    gap: 15px 10px;
+  }
+
   .res-card {
-    /* width: 200px; */
+    width: 160px;
     margin: 0px;
+  }
+
+  .res-logo {
+    width: 150px;
+    height: 120px;
+  }
+
+  .res-info {
+    padding: 0px 10px 10px 10px;
+  }
+
+  .upper-container {
+    gap: 5px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .stars {
+    width: 30px;
+    min-width: 30px;
+    font-size: 10px;
+  }
+
+  .cuisine,
+  .location,
+  .price,
+  .time {
+    font-size: 11px;
   }
 }
 
@@ -425,6 +458,23 @@ a {
   height: 120px;
 }
 
+@media (max-width: 600px) {
+  .shimmer-search {
+    height: 40px;
+  }
+
+  .shimmer-heading {
+    width: 90vw;
+    height: 20px;
+  }
+
+  .shimmer-cards {
+    width: 160px;
+    height: 230px;
+    margin: 0px;
+  }
+}
+
 /*--------------------------------------- menu page details ----------------------------------------------*/
 
 .res-detail-card {
@@ -465,6 +515,29 @@ a {
   width: 61vw;
   border-bottom: 14px solid #f0f0f0;
   padding-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .res-detail-card {
+    width: 80vw;
+    margin: 10px auto;
+  }
+  .res-detail-name {
+    font-size: 20px;
+  }
+  .res-detail-stars,
+  .res-detail-price,
+  .res-detail-cuisine {
+    font-size: 14px;
+  }
+  .res-detail-location,
+  .res-detail-time {
+    font-size: 12px;
+  }
+  .menu-heading {
+    width: 85vw;
+    font-size: 20px;
+  }
 }
 
 /*--------------------------------------- res dish card ----------------------------------------------*/
@@ -641,6 +714,13 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
+@media (max-width: 600px) {
+  .offer-label {
+    margin-left: 10px !important;
+    padding: 8px 10px !important;
+  }
+}
+
 /*--------------------------------------- about ----------------------------------------------*/
 
 .template-container {
@@ -666,6 +746,7 @@ a {
   margin: 0px auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 14px 10px;
   font-size: 16px;
   font-weight: 700;
@@ -680,6 +761,38 @@ a {
 
   .template-content {
     padding: 20px 30px;
+  }
+
+  .accordion-header-container {
+    width: 80vw;
+    padding: 10px;
+  }
+
+  .res-dish-card {
+    width: 80vw;
+    margin: 10px auto;
+    align-items: flex-start;
+  }
+
+  .res-dish-left-container {
+    padding-right: 20px;
+  }
+
+  .res-dish-name {
+    font-size: 16px;
+  }
+
+  .res-dish-type {
+    margin-right: 0;
+  }
+
+  .res-dish-description {
+    font-size: 12px;
+  }
+
+  .add-to-cart-init {
+    height: 30px;
+    font-size: 14px;
   }
 }
 
@@ -880,6 +993,17 @@ a {
   align-items: center;
 }
 
+@media (max-width: 600px) {
+  .cart-page-container {
+    flex-direction: column;
+  }
+  .cart-page-left-container {
+    width: 100%;
+  }
+  .cart-page-right-container {
+    width: 100%;
+  }
+}
 /**************************************** cart-dish-card and res-name*************************************************/
 
 .cart-res-details {
@@ -924,6 +1048,7 @@ a {
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  white-space: nowrap;
 }
 
 .clear-cart:hover {
@@ -997,6 +1122,25 @@ a {
   text-align: right;
 }
 
+@media (max-width: 600px) {
+  .cart-res-details {
+    width: 100%;
+  }
+
+  .cart-dish-card {
+    gap: 10px;
+    width: 85%;
+  }
+
+  .cart-dish-card-left-container {
+    gap: 10px;
+  }
+
+  .cart-dish-price {
+    width: unset;
+  }
+}
+
 /**************************************** bill-section *************************************************/
 
 .bill-card,
@@ -1064,6 +1208,13 @@ a {
 
 .proceed-pay:hover {
   box-shadow: 0 0 5 grey;
+}
+
+@media (max-width: 600px) {
+  .bill-card,
+  .bill-policy {
+    width: 95%;
+  }
 }
 
 /**************************************************************************************************/
@@ -1140,6 +1291,16 @@ a {
 @media (max-width: 600px) {
   .empty-cart-container {
     height: 60vw;
+  }
+
+  .change-res-container {
+    width: unset;
+  }
+
+  .change-cancel,
+  .change-save {
+    font-size: 14px;
+    white-space: pre;
   }
 }
 
