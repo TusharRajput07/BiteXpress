@@ -2,7 +2,7 @@
     "version": 2,
     "functions": {
         "api/browse.js": {
-            "runtime": "nodejs14.x"
+            "runtime": "nodejs"
         }
     }
 }
