@@ -4,7 +4,7 @@
   "description": "learning React",
   "scripts": {
     "start": "parcel app.html",
-    "build": "parcel build app.html --dist-dir dist",
+    "build": "parcel build app.html --dist-dir frontend/dist",
     "test": "jest",
     "watch-test": "jest --watch"
   },
