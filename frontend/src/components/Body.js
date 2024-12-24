@@ -25,7 +25,9 @@ const Body = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/browse");
+      const response = await fetch(
+        "https://bite-xpress-8cgw.vercel.app/api/browse"
+      );
 
       const json = await response.json();
 
