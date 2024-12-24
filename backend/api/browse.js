@@ -1,6 +1,14 @@
 import fetch from "node-fetch";
 
 export default async function handler(req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    return res.status(200).end(); // Handle preflight request
+  }
+
   const swiggyApiUrl =
     "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65420&lng=77.23730";
 
