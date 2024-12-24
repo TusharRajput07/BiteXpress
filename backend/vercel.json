@@ -14,8 +14,8 @@
     ],
     "rewrites": [
         {
-            "source": "/(.*)",
-            "destination": "/app.html"
+            "source": "/api/(.*)",
+            "destination": "/api"
         }
     ]
 }
